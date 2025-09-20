@@ -3,7 +3,7 @@ import { createClient } from "@/utils/superbase/server";
 import { tree } from "next/dist/build/templates/app-page";
 import { error } from "console";
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
     
     const { type, payload } = await req.json()
     const supabase = await createClient();
